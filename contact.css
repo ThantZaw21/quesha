@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Raleway:ital,wght@0,100..900;1,100..900&family=Trochut:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Trochut:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root{
+    --bodyfont:"Yanone Kaffeesatz", sans-serif;
+    --raleway:"Raleway", sans-serif;
+    --fofahla:"Trochut", sans-serif;
+    --back-color:#030100;
+    --back2:#361500;
+    --soft:#fb8406;
+    --verysoft:#CC9544;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: var(--back-color);
+}
+
+.navar{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: space-between;
+    text-decoration: none;
+    transition: .6s ease;
+}
+
+.navar.scrolled{
+    background-color: var(--back-color);
+    top: 0;
+    margin-top: 0px;
+}
+
+.navar ul{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+}
+
+.navar ul li{
+    list-style: none;
+    text-decoration: none;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.navar ul li a{
+    position: relative;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: var(--raleway);
+
+}
+
+.navar ul li a::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 65%;
+    border-bottom: 1.5px solid white;
+    transition: all .6s ease;
+}
+
+.navar ul li a:hover::before{
+    transform: translateY(-30px);
+    transition: all .6s ease;
+}
+
+
+button{
+    position: relative;
+    margin: 40px 10px;
+    padding: 10px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+ button::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    color: red;
+    top: -80px;
+    left: 0;
+    border-radius: 50%;
+    background: #CC9544;
+    border: 1px solid white;
+    z-index: -1;
+    transition: .8s ease;
+  }
+
+button:hover::before{
+    top: 0;
+    border-radius: 0;
+  }
+
+
+
+.contactinfo{
+    position: absolute;
+    display: flex;
+    margin: 100px;
+    padding: 50px;
+    height: 400px;
+    width: 800px;
+    border: 1px solid white;
+}
+
+.contactinfo .links{
+    width: 40%;
+    border-right: 1px solid white;
+}
+
+.contactinfo .links h1{
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    font-family: var(--raleway);
+    font-weight: 200px;
+}
+
+.contactinfo .links p{
+    font-size: 18px;
+    color: white;
+    font-weight: 20px;
+    font-family: var(--raleway);
+    padding: 10px;
+}
+
+.inputs{
+    padding-left: 50px;
+    color: white;
+    display: grid;
+    /* grid-template-columns: 2fr 2fr; */
+}
+
+label{
+    padding-right: 30px;
+}
+
+.inputs input{
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 250px;
+    border-bottom: 1px solid  white;
+    padding-top: 20px;
+}
+
+@media (max-width: 700px) {
+    .navar{
+      display: grid;
+      width: 100%;
+      height: 300px;
+      backdrop-filter: blur(10px);
+      z-index: 1;
+      padding-left: 0px;
+      padding-right: 0px;
+      text-decoration: none;
+      top: -300px;
+      transition: .6s ease;
+    }
+  
+    .navar.active{
+      transform: translateY(0);
+    }
+  
+    .navar .close{
+      display: block;
+      font-size: 30px;
+      color: white;
+      margin-left: 500px;
+      z-index: 20;
+    }
+  
+  
+  .navar ul{
+    display: grid;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -80px;
+  }
+  
+  .logo1{
+    align-items: center;
+    text-align: center;
+    margin-top: -90px;
+    margin-left: 50px;
+  }
+  
+  .navar ul li{
+  
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .topic{
+    font-size: 40px;
+  }
+  
+  .content{
+    font-size: 20px;
+  }
+  
+  .navar ul li a{
+    text-align: center;
+  }
+  
+    .menu{
+      display: block;
+      font-size: 40px;
+      color: white;
+      float: right;
+      margin-right: -40px;
+    }
+  
+    .description{
+      display: grid;
+      position: relative;
+      gap: 20px;
+      background: var(--back-color);
+      margin-top: 100vh;
+      padding-left: 0px;
+      padding-right: 100px;
+      padding: 20px;
+    }
+  
+    .description img{
+      margin-left: 30px;
+    }
+  
+    .bottom{
+      display: grid;
+      margin-left: 50px;
+    }
+    .contactinfo{
+        position: absolute;
+        display: grid;
+        margin-left: -10px;
+        padding: 50px;
+        height: 660px;
+        width: 400px;
+        border: 1px solid white;
+    }
+    
+    .contactinfo .links{
+        width: 100%;
+        border-right:none ;
+        border-bottom: 1px solid white;
+    }
+    
+    .contactinfo .links h1{
+        text-align: center;
+        font-size: 20px;
+        padding: 10px;
+        color: white;
+        font-family: var(--raleway);
+        font-weight: 200px;
+    }
+    
+    .contactinfo .links p{
+        text-align: center;
+        font-size: 18px;
+        color: white;
+        font-weight: 20px;
+        font-family: var(--raleway);
+        padding: 10px;
+    }
+
+    .inn{
+        display: flex;
+        margin-left: -50px;
+        margin-top: 20px;
+    }
+    
+    .inputs{
+        color: white;
+        display: grid;
+        /* grid-template-columns: 2fr 2fr; */
+    }
+    
+    label{
+        padding-right: 30px;
+    }
+    
+    .inputs input{
+        background: transparent;
+        border: none;
+        outline: none;
+        width: 220px;
+        border-bottom: 1px solid  white;
+        padding-top: 20px;
+    }
+  }
